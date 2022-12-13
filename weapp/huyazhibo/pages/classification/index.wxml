@@ -1,0 +1,21 @@
+<view class="container">
+    <scroll-view scroll-y="{{true}}">
+    <view class="header">
+        <image src="/image/sousuo.png" class="header_image" />
+        <navigator url="/pages/commend/index" open-type="redirectTo" class="tuijian">
+            推荐
+        </navigator>
+        <navigator url="/pages/classification/index"  class="fenlei">
+            分类
+        </navigator>
+    </view>
+    <view class="content">
+        <view class="huya" wx:for="{{commendData}}" wx:key="data-gid">
+            <view class="item">
+                <image src="{{item.src}}"  class="huya_picture"/>
+                <text class="title">{{item.title}}</text>
+            </view>
+        </view>
+    </view>
+    </scroll-view>
+</view>

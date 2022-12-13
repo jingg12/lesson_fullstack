@@ -1,0 +1,22 @@
+/* pages/sousuo/index.wxss */
+.content{
+    display: flex;
+}
+.huya_input{
+    background-image: url(https://a.msstatic.com/huya/main3/common/assets/img/header/sprite/search_btn_2_df885.png);
+    width: 80%;
+    background-color: rgba(244, 244, 244, 1);
+    background-position:280px 50%;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 5px;  
+    border-radius: 20px;
+}
+.ziti {
+    position: relative;
+    text-align: center;
+    padding: 5px 0 5px 15px;
+    color: orange;
+}
+
+

@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/commend/index",
+        "pages/classification/index",
+        "pages/logs/logs",
+        "pages/video/index",
+        "pages/my/index",
+        "pages/search/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "虎牙直播",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#000000",
+        "selectedColor": "yellow",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "直播",
+                "iconPath": "/image/zhibo.png",
+                "selectedIconPath": "/image/zhibo.png"
+            },
+            {
+                "pagePath": "pages/video/index",
+                "text": "视频",
+                "iconPath": "/image/video.png",
+                "selectedIconPath": "/image/video.png"
+            },
+            {
+                "pagePath": "pages/my/index",
+                "text": "我的",
+                "iconPath": "/image/my.png",
+                "selectedIconPath": "/image/my.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

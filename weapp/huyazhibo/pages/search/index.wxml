@@ -1,0 +1,7 @@
+<!--pages/sousuo/index.wxml-->
+<view class="content">
+    <input class="huya_input" auto-focus placeholder="搜索主播/直播/游戏"/>
+    <navigator url="/pages/index/index" class="ziti">取消</navigator>
+</view>
+       
+    

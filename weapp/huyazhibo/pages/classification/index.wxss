@@ -1,0 +1,79 @@
+/* pages/classification/index.wxss */
+.container {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: #f2f6fc;
+}
+
+.huya {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12rpx;
+    border: 1px solid rgba(0 ,0 ,0, 0.1);
+    border-radius: 8px;
+    margin-left: 1%;
+    background: #ffffff;
+    
+}
+.huya:not(:nth-child(3n)){
+    margin-right: 2%;
+}
+
+.item {
+    text-align: center;
+    /* background-color: #ffffff; */
+    width: 108px;
+    height: 120px;
+    float: left;
+    
+}
+.huya_picture{
+    width: 92px;
+    height: 80px;
+    padding: 2px;
+    margin:2px ;
+}
+
+.title{
+    line-height: 2px;
+    overflow: hidden;
+    margin: 1px auto 0;
+    padding: 2px;
+    text-align: center;
+    font-size: 11px;
+}
+
+image {
+    width: 100px;
+    height: 100px;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.fenlei{
+    padding: 0 15px;
+}
+.tuijian{
+    padding: 0 15px;
+}
+.header_image{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: -85%;
+}

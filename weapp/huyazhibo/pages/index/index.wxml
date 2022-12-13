@@ -1,0 +1,30 @@
+<view class="page">
+        <view class="page__hd">
+            <view class="hy_tab">
+                <image src="/image/sousuo.png" class="header_image" />
+                <view bindtap="selectTab" data-tab="0" class="hy_tab__item {{tab == 0 ? 'hx_tab__item-on' : ''}}">
+                    <view>推荐</view>
+                </view>
+                <view bindtap="selectTab" data-tab="1" class="hy_tab__item {{tab == 1 ? 'hx_tab__item-on' : ''}} ">
+                    <view>分类</view>
+                </view>
+            </view>
+        </view>
+        <view class="page__bd">
+            <swiper class="hy_slides">
+                <swiper-item>
+                    1
+                </swiper-item>
+                <swiper-item>
+                    <view class="content">
+                        <view class="huya" wx:for="{{commendData}}" wx:key="data-gid">
+                            <view class="item">
+                                <image src="{{item.src}}" class="huya_picture" />
+                                <text class="title">{{item.title}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+</view>
