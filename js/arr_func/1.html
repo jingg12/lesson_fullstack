@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="root">
+
+    </ul>
+    <script>
+        // 前端
+        // 拉取数据？ API
+        // https://www.fastmock.site/mock/fc09142a9029fcb292822d4ee872f52b/beers/banners 接口地址
+        // 后端
+        // 异步
+        const list = document.getElementById('root');
+        const p = fetch('https://www.fastmock.site/mock/fc09142a9029fcb292822d4ee872f52b/beers/banners')
+            // console.log(p);
+            // pengding promise 起始状态
+            // fullfilled 成功解决
+            // rejected 失败
+            // 控制执行过程
+            p
+                .then(res => 
+                    // 二进制流到达应用，json 化也是需要化时间的， promise 实例
+                    // console.log(res.json());
+                    res.json()
+                )
+                .then(data => {
+                    console.log(data);
+                    // DOM
+                    const lis = data.map(item => `
+                        <li>
+                            <div>
+                                ${item.id}
+                                ${item.title}
+                                <img src="${item.img}">
+                            </div>
+                        </li>
+                    `)
+                    list.innerHTML = lis.join('')
+                    // console.log(titles);
+                    // data.forEach(item => {
+                    //     // map es6 array 方法 数组变形
+                    //     //reduce
+                    //     list.innerHTML +=`
+                    //     <li>
+                    //         <div>
+                    //             ${item.id}
+                    //             ${item.title}
+                    //             <img src="${item.img}">
+                    //         </div>
+                    //     </li>
+                    // `
+                    // })
+                })
+                .catch(e => {
+                    console.log(e);
+                })
+    </script>
+</body>
+</html>
