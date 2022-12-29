@@ -10,3 +10,4 @@
        setTimeout fetch  eventListener 异步的，放入Event Loop里
 
        同步代码快速运行，  js进入到idle 状态 3s 在进入单线程运行
+       
