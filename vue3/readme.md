@@ -43,4 +43,10 @@
 - 占位符与数据绑定的区别
     普通的html 里输出的 占位符  {{}} 
     标签的属性 或组件的props 里  数据绑定  
-    - v-bind:value   :value  单向数据绑定 
+    - v-bind:value 绑定值  :value v-bind省略 单向数据绑定 
+      v-on：input 绑定事件 v-on 简写为 @
+    - 单项数据？
+      v-bind：value + v-on：input 复杂出现在 表单元素中
+    - 双向数据绑定
+      v-model = v-bind：value + v-on：input
+      api 更友好
