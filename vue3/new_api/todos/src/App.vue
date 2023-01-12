@@ -8,8 +8,10 @@ import { ref } from 'vue';
 // ref 响应式 简单值
 
 let count = ref(1);
+console.log(count,'/////');
 function add() {
-  count++;
+  console.log('......');
+  count.value++;
   
 }
 </script>
