@@ -13,3 +13,4 @@
 -  {} for key 拷贝
 -   深维  没那么简单
     JSON.parse(JSON.stringify()) 比较简单 能实现的深拷贝
+-  也有些缺点， 回到拷贝的根上去
