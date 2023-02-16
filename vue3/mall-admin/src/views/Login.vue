@@ -47,6 +47,7 @@
     import { reactive, ref, onMounted } from 'vue'
     import { login } from '@/service/user.js'
     import md5 from 'js-md5'
+    import { setLocal } from '@/utils'
 
     const loginForm = ref(null)// 初始值为空组件还没有挂载
     
@@ -76,6 +77,14 @@
                     userName: state.formData.username || '',
                     passwordMd5: md5(state.formData.password)
                 })
+                console.log(data);
+                //服务器端签发的令牌环
+                setLocal('token', data)
+                router.push({
+                    path: '/'
+                })
+            }else{
+
             }
         })
     }

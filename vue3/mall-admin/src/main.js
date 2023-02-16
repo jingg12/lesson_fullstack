@@ -15,16 +15,19 @@ import {
     ElFormItem,
     ElInput,
     ElButton,
-    ElCheckbox
+    ElCheckbox,
+
 } from 'element-plus'
 import 'element-plus/dist/index.css'
+import { createPinia } from 'pinia' //
 // - css reset 。。。
 // - 全局要做的， 在这做
 
 const app = createApp(App)// web app
 
 app
-    .use(router)
+    .use(router)//前端路由
+    .use(createPinia())// 中央数据管理
     // 全局组件
     .use(ElContainer)
     .use(ElAside)
