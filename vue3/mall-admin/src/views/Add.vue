@@ -1,25 +1,20 @@
 <template>
-    <div>
-        add
-        {{ profile.loginUserName }} {{ profile.nickName }}
-    </div>
+  <div>
+    Add
+    {{profile.loginUserName}}------{{ profile.nickName }}
+  </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed } from '@vue/reactivity';
 import { useUserStore} from '@/store/user.js'
-// 如何从中央取profile 到页面组件？
-const userStore = useUserStore();// useRouter hooks
-console.log(userStore.profile.loginUserName, '///');
+// 如何从中央去profile 到页面组件?
+const userStore = useUserStore(); // useRouter hooks
+console.log(userStore.profile.loginUserName, '????');
 
 const profile = computed(() => userStore.profile)
-// console.log(profile,'.....');
-// export default {
-//     setup () {
+console.log(profile, '付总我的超人');
 
-//         return {}
-//     }
-// }
 </script>
 
 <style lang="stylus" scoped>
