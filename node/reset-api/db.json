@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "一句基于",
+      "author": "typicode"
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "title": "websocket 聊天室",
+      "author": "caicai",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 2,
+      "body": "hello react",
+      "postId": 1
+    },
+    {
+      "body": "太好用了",
+      "postId": 2,
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
