@@ -29,6 +29,7 @@ $(window).keyup(function(e) {
         $('.submit').click()
     }
 })
+
 $('#avatar').change(function() {
     if (this.files.length != 0) {
         const file = this.files[0],
@@ -72,6 +73,7 @@ $('#avatar').change(function() {
         reader.readAsDataURL(file)
     }
 })
+
 $('.submit')
     .click(function() {
         // ajax 提交表单 
@@ -104,6 +106,14 @@ $('.submit')
             cache: false,
             dataType: 'json',
             success: function(msg) {
+                if (msg.code === 200) {
+                    console.log('注册成功');
+                    setTimeout(() => {
+                        window.location.href = '/signin'
+                    }, 1000)
+                } else {
+                    console.log(msg.message);
+                }
             }
         })
     })

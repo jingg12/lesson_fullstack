@@ -6,7 +6,7 @@ const pool = mysql.createPool({
     user: config.database.USERNAME,
     password: config.database.PASSWORD,
     database: config.database.DATABASE,
-    port: config.database.PORT,
+    port: config.database.PORT
 })
 
 // sql 语句，必传
@@ -35,6 +35,16 @@ exports.findDataCountByName = (name) => {
     return query(_sql)
 }
 
+exports.insertData = value => {
+    let _sql = "insert into users set name=?, pass=?, avatar=?, moment=?;"
+    return query(_sql, value)
+}
+
+exports.findDataByName = name => {
+    let _sql = `select * from users where name="${name}";`
+    return query(_sql)
+}
+
 let users = 
     `create table if not exists users(
         id INT NOT NULL AUTO_INCREMENT,
@@ -49,4 +59,4 @@ let users =
 let createTable = (sql) => {
     return query(sql, [])
 }
-createTable(users)  
+createTable(users)
