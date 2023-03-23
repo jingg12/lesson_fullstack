@@ -200,5 +200,5 @@
 - 为什么jwt 这种方案,  新的主流?
     1. cookie 不安全
     2. cookie 性能不好
-    3. token 小， 生成 json 对象 session要那么多空间了 111
+    3. token 小， 生成 json 对象 session要那么多空间了 
     
