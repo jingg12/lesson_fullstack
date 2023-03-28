@@ -181,7 +181,7 @@
     1. cookie 每次都会http带上
         文本, 不能太大, 影响http的性能
     2. cookie 在客户端和后端都可写可读
-    3. 登录时, 服务器 ctx.session 同时, 自动设置cookie
+    3. 登录时, 服务器 ctx.session 同时, 自动设置cookie 
         USER_SID = session_id 值
         session (会话对象 id name cart 大一点的, 后端内存中) 依赖于cookie 而生
     4. session 中间件 会使用cookie  USER_SID 解析session_id
@@ -202,3 +202,46 @@
     2. cookie 性能不好
     3. token 小， 生成 json 对象 session要那么多空间了 
     
+- 关系型数据库
+    MYSQL SQLServer 表关联 
+    Users 1 对 n Posts 
+    Posts 1 对 n Comments
+    Key  Primary Key  Uniq Key Foreign Key
+    Key 组合  查询业务的频繁度
+    1500 页面（硬盘）  没有索引   从第一页找到最后一页
+    索引 内存之中 先查5页 索引   第几页
+- NOSQL
+- 数据冗余
+name  有利于列表页表单查询  适当
+
+- 中间件登录检测方案
+    1. 在后端项目架构中  middlewares  是自定义中间件的所在
+    2. 登录校验也可以和session， bodyParser。。。可以视为一个独立的一个中间件，在路由发生时， 在controller 前面
+    '/path', checkLogin,, controller
+        数组  有顺序， 放一堆
+    3. 有利于复用
+
+- 内容安全
+    1. 不要相信用户的输入
+    2. 用户又可能输入js  代码， 甚至是sql
+        cookie 盗用
+    3. <script> 删除  转义
+
+- ctx.redirect 底层啥意思
+    重定向
+    301  Moved Permanently  永久重定向  http -> https
+    浏览器有缓存
+    jd.com 360buy.com(老用户)
+    服务器端返回的响应头
+    Status Code 301
+    Location： www.jd.com
+    302 Found
+    资源临时移动到新的URI 上
+    303 See  other
+    将POST  请求重定向到GET请求，
+    307  Temporary Redirect
+    跟302差不多，307 状态码不允许浏览器原本为POST的请求重定向到GET请求上
+
+- http编码
+    对请求uri  进行编码
+    中文一定会被编码  自动  ？name= 卢本伟
