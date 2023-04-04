@@ -50,3 +50,15 @@
       const el = ref<HTMLInputElement | null>(null)
       el.value?.focus()\
       ?. 兼容null
+
+-  数据接口怎么做？
+   - /api  表示接口地址
+      http://api.vikingship.xyz/api/columns?currentPage=1&pageSize=3
+      api/columns?currentPage=1&pageSize=3  qs
+      /api 是后端工程师   接口的路径的开始，约定  
+       /columns 列表
+   - 前后端分离
+      前端 vue 3000
+      后端 koa 8080 
+      跨域 cors  JSONP 代理proxy
+      A   C   B   后端接口已存在， 且在线上

@@ -24,7 +24,7 @@
     // console.log(homeStore.categoryList,'111');
     
 })
-console.log(productList, '///');
+// console.log(productList, '///');
 </script>
 
 <style lang="stylus" scoped>
