@@ -14,17 +14,17 @@ export const useHomeStore = defineStore('home', {
         // 修改 也在store 里面 数据管理的闭环? 
         async getSwiperList() {
             const { result } = await getSwiperList();
-            console.log(result);
+            // console.log(result);
             this.swiperList = result
         },
         async getCategoryList() {
             const { result } = await getCategoryList();
-            console.log(result);
+            // console.log(result);
             this.categoryList = result 
         },
         async getProductList() {
             const { result } = await getProductList();
-            console.log(result);
+            // console.log(result);
             this.productList = result 
         }
     }
