@@ -16,7 +16,7 @@ export const defaultErrorHandler = (
     let statusCode: number, message: string;
     
     /**
-     * 
+     * 处理异常
      */
     switch (error.message) {
         // 登录注册表单 后端重新注册

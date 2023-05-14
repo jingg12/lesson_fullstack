@@ -9,7 +9,7 @@ export const store = async (
     // 请求体中解出用户名 密码
     const { name, password } = request.body
     // sql 数据库和node 服务器 一定是分离
-    console.log(name, password, '////')
+    // console.log(name, password, '////')
     try {
         const data = await userService.createUser({name, password});
         response.status(201).send(data)

